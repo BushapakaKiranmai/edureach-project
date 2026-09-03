@@ -1,3 +1,4 @@
+import "./dns.js";
 import app from "./app.js";
 import { initializeKnowledgeBase } from "./services/rag.service.js";
 
@@ -5,7 +6,6 @@ const PORT = process.env.PORT || 5000;
 
 const start = async () => {
   try {
-
     await initializeKnowledgeBase();
 
     app.listen(PORT, () => {
